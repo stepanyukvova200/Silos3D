@@ -43,6 +43,229 @@ console.log(
 const data = [
     {
         grainBin: {
+            name: 'Grain Bin #2',
+            displayName: 'Grain Bin #2',
+            binType: 'CIRCLE',
+            annotations: 'some annotation',
+            createdDate: '2024-01-12T09:15:00Z',
+            createdBy: 'robert.johnson',
+            lastModifiedDate: '2024-01-16T11:20:00Z',
+            lastModifiedBy: 'robert.johnson',
+            deleted: false,
+        },
+        thermalSuspensions: [
+            {
+                id: '5',
+                name: 'Left Side Thermal Suspension A1',
+                displayName: 'TS-A1-L',
+                enabledCalculation: true,
+                enabledUI: true,
+                position: -1,
+                theta: 0,
+                sorting: 'ASC',
+                deltaTemperature: 3.1,
+                currentTemperature: 25.5,
+                color: '#1d0ee7',
+                annotations: 'Calibrated on 2024-01-15. Regular maintenance required.',
+                createdDate: '2024-01-10T08:00:00Z',
+                createdBy: 'john.doe',
+                lastModifiedDate: '2024-01-15T14:30:00Z',
+                lastModifiedBy: 'jane.smith',
+                deleted: false,
+                sensors: [
+                    {
+                        id: 5+1,
+                        temp: 15.3,
+                        height: 2 * 1,
+                        color: getColor(15.3),
+                    },
+                    {
+                        id: 5 + 2,
+                        temp: 15.7,
+                        height: 2 * 2,
+                        color: getColor(15.3),
+                    },
+                    {
+                        id: 5+3,
+                        temp: 14.8,
+                        height: 2 * 3,
+                        color: getColor(15.3),
+                    },
+                    {
+                        id: 5+4,
+                        temp: 24.4,
+                        height: 2 * 4,
+                        color: getColor(24.4),
+                    },
+                    {
+                        id: 5+5,
+                        temp: 27.2,
+                        height: 2 * 5,
+                        color: getColor(27.2),
+                    },
+                    {
+                        id: 5+6,
+                        temp: 23.3,
+                        height: 2 * 6,
+                        color: getColor(23.3),
+                    },
+                    {
+                        id: 5+7,
+                        temp: 17.3,
+                        height: 2 * 7,
+                        color: getColor(17.3),
+                    },
+                    {
+                        id: 5+8,
+                        temp: 15.3,
+                        height: 2 * 8,
+                        color: getColor(15.3),
+                    },
+                    {
+                        id: 5+9,
+                        temp: 14.3,
+                        height: 2 * 9,
+                        color: getColor(15.3),
+                    },
+                    {
+                        id: 5+10,
+                        temp: 13.3,
+                        height: 2 * 10,
+                        color: getColor(15.3),
+                    },
+                    {
+                        id: 5+11,
+                        temp: 4.3,
+                        height: 2 * 11,
+                        color: 'white',
+                    },
+                    {
+                        id: 5+12,
+                        temp: 3.3,
+                        height: 2 * 12,
+                        color: 'white',
+                    },
+                    {
+                        id: 5+13,
+                        temp: 3.2,
+                        height: 2 * 13,
+                        color: 'white',
+                    },
+                    {
+                        id: 5+14,
+                        temp: 3.1,
+                        height: 2 * 14,
+                        color: 'white',
+                    },
+                ],
+            },
+            ...Array.from({ length: 6 }, (_, index) => {
+                const thetaStep = 60;
+                return {
+                    id: (index + 123).toString(),
+                    name: `Thermal Suspension A${index + 123}`,
+                    displayName: `TS-A${index + 123}`,
+                    enabledCalculation: true,
+                    enabledUI: true,
+                    position: 1,
+                    theta: ((index + 1) * thetaStep) % 360,
+                    sorting: 'ASC',
+                    deltaTemperature: 3.1,
+                    currentTemperature: 25.5,
+                    color: '#328624',
+                    annotations: 'Calibrated on 2024-01-15. Regular maintenance required.',
+                    createdDate: '2024-01-10T08:00:00Z',
+                    createdBy: 'john.doe',
+                    lastModifiedDate: '2024-01-15T14:30:00Z',
+                    lastModifiedBy: 'jane.smith',
+                    deleted: false,
+                    sensors:
+                        [
+                        {
+                            id: 123+1,
+                            temp: 15.3,
+                            height: 2 * 1,
+                            color: getColor(15.3),
+                        },
+                        {
+                            id: 123 + 2,
+                            temp: 15.7,
+                            height: 2 * 2,
+                            color: getColor(15.3),
+                        },
+                        {
+                            id: 123+3,
+                            temp: 14.8,
+                            height: 2 * 3,
+                            color: getColor(15.3),
+                        },
+                        {
+                            id: 123+4,
+                            temp: 16.4,
+                            height: 2 * 4,
+                            color: getColor(16.4),
+                        },
+                        {
+                            id: 123+5,
+                            temp: 17.2,
+                            height: 2 * 5,
+                            color: getColor(17.2),
+                        },
+                        {
+                            id: 123+6,
+                            temp: 19.3,
+                            height: 2 * 6,
+                            color: getColor(19.3),
+                        },
+                        {
+                            id: 123+7,
+                            temp: 17.3,
+                            height: 2 * 7,
+                            color: getColor(17.3),
+                        },
+                        {
+                            id: 123+8,
+                            temp: 15.3,
+                            height: 2 * 8,
+                            color: getColor(15.3),
+                        },
+                        {
+                            id: 123+9,
+                            temp: 9.3,
+                            height: 2 * 9,
+                            color: 'cyan',
+                        },
+                        {
+                            id: 123+10,
+                            temp: 5.3,
+                            height: 2 * 10,
+                            color: 'white',
+                        },
+                        {
+                            id: 125+11,
+                            temp: 4.3,
+                            height: 2 * 11,
+                            color: 'white',
+                        },
+                        {
+                            id: 123+12,
+                            temp: 3.3,
+                            height: 2 * 12,
+                            color: 'white',
+                        },
+                        {
+                            id: 123+13,
+                            temp: 3.2,
+                            height: 2 * 13,
+                            color: 'white',
+                        },
+                    ],
+                };
+            }),
+        ],
+    },
+    {
+        grainBin: {
             name: 'Grain Bin #1',
             displayName: 'Grain Bin #1',
             binType: 'CIRCLE',
@@ -254,6 +477,7 @@ export const Silos: React.FC<SilosProps> = ({
     const baseRadius = (silosConstantWidth / 2) / (exCirclies + 1);
 
     const radii = {
+        '-1': 0.01,
         0: baseRadius,
         1: baseRadius * 2,
         2: baseRadius * 3,
@@ -306,7 +530,7 @@ export const Silos: React.FC<SilosProps> = ({
 
             {/*подвески*/}
             {data[0].thermalSuspensions.map((suspension: any, index: number) => {
-                const suspensionPosition = suspension.position as 0 | 1 | 2;
+                const suspensionPosition = suspension.position as -1 | 0 | 1 | 2;
                 const suspensionRadius = radii[suspensionPosition];
 
                 const { x, y } = calculateCoordinates(
@@ -320,7 +544,7 @@ export const Silos: React.FC<SilosProps> = ({
                             <ColumnSensors
                                 key={x + '' + y}
                                 x={x} z={y}
-                                sensorsHeight={ suspensionPosition === 0 ? cylinderHeight + 3 : cylinderHeight}
+                                sensorsHeight={ suspensionPosition === 0 ? cylinderHeight + 3 : suspensionPosition === -1 ? cylinderHeight + 3 : cylinderHeight}
                                 silosPosition={silosPosition}
                                 sensorsData={suspension.sensors}
                                 name={suspension.displayName}

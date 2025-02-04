@@ -72,6 +72,7 @@ export const ColumnSensors: React.FC<ColumnSensorsProps> = ({
                     z={z}
                     temp={value.temp}
                     color={value.color}
+                    isActive={isActive}
                 />
             })}
         </>
